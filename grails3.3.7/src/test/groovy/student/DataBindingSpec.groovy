@@ -137,18 +137,10 @@ public class DataBindingSpec extends Specification {
 class StudentEnrollmentCmd {
     Student student
     Map<String,CourseCmd> courses;
-
-    public String toString() {
-        "student="+student.toString()+",courses="+courses.values()*.toString().stream().collect(Collectors.joining(","))
-    }
 }
 
 class CourseCmd {
     CourseDomain course
-
-    public String toString() {
-        "course=[id:${course.id}]"
-    }
 }
 
 class CourseDomain {
