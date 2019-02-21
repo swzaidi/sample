@@ -62,11 +62,11 @@ public class DataBindingSpec extends Specification {
         binder.bind(obj,source)
 
         then:
-        // this should not throw an exception
+        // this should not throw an exception, but throws an exception
         MissingPropertyException ex = thrown()
         System.out.println ( "Exception again:" + ex.message );
 
-        // the following should work
+        // the following should work, but does not work
         obj.student.id == 1
         obj.courses['10'].course.id == 10
     }
