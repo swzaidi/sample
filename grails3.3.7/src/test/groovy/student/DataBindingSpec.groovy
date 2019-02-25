@@ -66,8 +66,9 @@ public class DataBindingSpec extends Specification {
         MissingPropertyException ex = thrown()
         System.out.println ( "Exception thrown:" + ex.message );
 
-        // the following should work, but does not work
+        // student.id is bound correctly
         obj.student.id == 1
+        // the following doesn't work
         obj.courses['10'].course.id == 10
     }
 
@@ -116,8 +117,9 @@ public class DataBindingSpec extends Specification {
         MissingPropertyException ex = thrown()
         //System.out.println ( ex.message );
 
-        // the following tests should work
+        // student.id binds correctly
         obj.student.id == 1
+        // the following doesn't work.
         obj.courses['10'].course.id == 10
     }
 
