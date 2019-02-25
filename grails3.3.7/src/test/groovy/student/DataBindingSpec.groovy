@@ -64,7 +64,7 @@ public class DataBindingSpec extends Specification {
         then:
         // this should not throw an exception, but throws an exception
         MissingPropertyException ex = thrown()
-        System.out.println ( "Exception again:" + ex.message );
+        System.out.println ( "Exception thrown:" + ex.message );
 
         // the following should work, but does not work
         obj.student.id == 1
@@ -114,7 +114,7 @@ public class DataBindingSpec extends Specification {
         //    No such property: course.id for class: student.CourseCmd
         //    Possible solutions: course
         MissingPropertyException ex = thrown()
-        System.out.println ( ex.message );
+        //System.out.println ( ex.message );
 
         // the following tests should work
         obj.student.id == 1
