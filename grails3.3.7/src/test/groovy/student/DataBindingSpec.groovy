@@ -135,8 +135,12 @@ public class DataBindingSpec extends Specification {
 }
 
 class StudentEnrollmentCmd {
-    Student student
+    MyStudent student
     Map<String,CourseCmd> courses;
+}
+
+class MyStudent {
+    Long id;
 }
 
 class CourseCmd {
